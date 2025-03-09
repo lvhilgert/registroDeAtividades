@@ -74,7 +74,7 @@ async function enviarEmailRecuperacao(email, novaSenha) {
         service: 'gmail',
         auth: {
             user: 'r.registrodeatividades@gmail.com',
-            pass: 'nsns mymt iwhh ftrg'
+            pass: ''
         }
     });
 
