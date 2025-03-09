@@ -69,12 +69,12 @@ function gerarSenhaTemporaria() {
 
 async function enviarEmailRecuperacao(email, novaSenha) {
     console.log(`✉️ Tentando enviar email para: ${email} com senha: ${novaSenha}`);
-
+    const emailPassword = process.env.EMAIL_PASSWORD;
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'r.registrodeatividades@gmail.com',
-            pass: ''
+            pass: 'emailPassword'
         }
     });
 
