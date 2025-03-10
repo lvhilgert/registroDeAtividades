@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="login-header">
+    <h2>✏️ Registro de Avaliações</h2>
+    <br>
+    <h3>Fazer login</h3>
+  </div>
+
+  <div *ngIf="mensagemErro" class="erro">{{ mensagemErro }}</div>
+
+  <input type="email" placeholder="Email" [(ngModel)]="email">
+  <input type="password" placeholder="Senha" [(ngModel)]="senha">
+
+  <button (click)="fazerLogin()">Entrar</button>
+
+  <p class="info-link">
+      Não possui login? 
+      <a (click)="irParaCadastro()">Cadastre-se</a>
+  </p>
+
+  <p class="info-link">
+    ➡️ Esqueceu sua senha?
+    <a (click)="irParaRecuperarSenha()">Clique aqui</a> 
+  </p>
+</div>

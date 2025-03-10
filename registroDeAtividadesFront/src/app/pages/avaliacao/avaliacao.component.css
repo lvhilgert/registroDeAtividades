@@ -1,0 +1,146 @@
+.grid-header {
+    display: grid;
+    grid-template-columns: 40px auto 40px; /* Ícone de expandir, Nome da Avaliação, Ícone de Notas */
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 40px auto 40px; /* Adicionando espaço para o ícone de notas */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    align-items: center;
+}
+
+.grid-row div:nth-child(2) {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.expand-icon {
+    width: 18px;
+    height: 18px;
+    fill: #007bff;
+}
+
+.atividade-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.atividade-indent {
+    width: 20px; /* Indentação */
+}
+
+.corrigir-icone-container {
+    width: 18px; 
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.corrigir-icone {
+    width: 20px; 
+    height: 20px;
+}
+
+.nota-icone-container {
+    width: 18px; 
+    height: 18px;
+    display: center;
+    align-items: end;
+    justify-content: end;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.nota-icone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nota-icone {
+    width: 28px;
+    height: 28px;
+}
+
+
+/* Para garantir que o nome fique alinhado com o ícone */
+.atividade-nome {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Botão "Adicionar Atividade" */
+.adicionar-atividade {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.botao-adicionar {
+    background-color: #28a745;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botao-adicionar:hover {
+    background-color: #218838;
+}
+
+
+.filtro-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.icone-titulo {
+    width: 28px;
+    height: 28px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+

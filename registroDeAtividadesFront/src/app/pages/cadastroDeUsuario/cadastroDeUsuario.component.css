@@ -1,0 +1,54 @@
+.cadastro-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 50px auto;
+  }
+  
+input {
+    margin-bottom: 0px;  /* Dá só uma separadinha leve */
+}
+
+.erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 0px;  /* Bem pequeno */
+}
+
+.senha-container {
+display: flex;
+align-items: center;
+border: 1px solid #ccc;
+padding: 5px;
+}
+  
+.senha-container input {
+flex: 1;
+border: none;
+outline: none;
+}
+  
+.icone {
+cursor: pointer;
+}
+
+button {
+padding: 10px;
+background-color: #007bff;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+#cancelar {
+background-color: #5c5858;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
+
+  

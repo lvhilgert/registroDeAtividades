@@ -1,0 +1,30 @@
+.recuperar-senha-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 50px auto;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.erro {
+    color: red;
+    font-size: 12px;
+}
+
+.mensagem {
+    color: green;
+    font-size: 12px;
+}

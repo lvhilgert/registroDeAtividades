@@ -1,0 +1,22 @@
+.icone-titulo {
+    width: 28px;
+    height: 28px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+

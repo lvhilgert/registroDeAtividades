@@ -1,0 +1,141 @@
+#toast-container {
+    pointer-events: none;
+    position: fixed;
+    z-index: 999999;
+}
+
+.toast {
+    pointer-events: auto;
+    background-clip: padding-box;
+    background-color: #030303;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 12px #999;
+    color: #fff;
+    opacity: 0.8;
+    padding: 15px;
+    width: 300px;
+    max-width: calc(100vw - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.toast-success {
+    background-color: #51a351;
+}
+
+.toast-error {
+    background-color: #bd362f;
+}
+
+.toast-info {
+    background-color: #2f96b4;
+}
+
+.toast-warning {
+    background-color: #f89406;
+}
+
+.toast-top-center {
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.toast-bottom-center {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.toast-top-left {
+    top: 12px;
+    left: 12px;
+}
+
+.toast-top-right {
+    top: 12px;
+    right: 12px;
+}
+
+.toast-bottom-right {
+    right: 12px;
+    bottom: 12px;
+}
+
+.toast-bottom-left {
+    bottom: 12px;
+    left: 12px;
+}
+
+#toast-container>div {
+    box-shadow: 0 0 12px #999;
+    -webkit-box-shadow: 0 0 12px #999;
+    -moz-box-shadow: 0 0 12px #999;
+}
+
+#toast-container> :hover {
+    box-shadow: 0 0 12px #000;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.toast-close-button {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    right: -0.3em;
+    top: -0.3em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toast-close-button:focus,
+.toast-close-button:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.toast-title {
+    font-weight: bold;
+}
+
+.toast-message {
+    word-wrap: break-word;
+}
+
+.toast-message a,
+.toast-message label {
+    color: #fff;
+}
+
+.toast-message a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.toast-close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+}
+
+@media all and (max-width: 240px) {
+    #toast-container>div {
+        padding: 8px;
+        width: 11em;
+    }
+
+    .toast-title {
+        font-size: 12px;
+    }
+
+    .toast-message {
+        font-size: 11px;
+    }
+}

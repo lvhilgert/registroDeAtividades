@@ -1,0 +1,30 @@
+<div class="lista-container">
+    <div class="lista-header">
+        <button class="voltar-btn" (click)="voltar()" aria-label="Voltar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+        </button>
+        <img src="/assets/Corrigir.png" alt="Corrigir" class="icone-titulo">
+        <h3>Registrar: {{ nomeAtividade }}</h3>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-header">
+            <div class="col-aluno">Aluno</div>
+            <div class="col-nota">Nota</div>
+        </div>
+
+        <div *ngFor="let aluno of alunos" class="grid-row">
+            <div class="col-aluno">{{ aluno.alunoNome }}</div>
+
+            <!-- Slider de notas -->
+            <div class="col-nota">
+                <input type="range" min="0" max="2" [(ngModel)]="aluno.nota" (change)="atualizarNota(aluno)">
+                <span>{{ getNotaDescricao(aluno.nota) }}</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="botao-secundario" (click)="voltar()">Voltar</button>
+</div>

@@ -1,0 +1,57 @@
+<div class="cadastro-container">
+    <h3>{{ avaliacaoId ? 'Editar Avaliação' : 'Cadastrar Nova Avaliação' }}</h3>
+
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="avaliacao.nome" placeholder="Informe o nome da avaliação">
+    <div *ngIf="nomeErro" class="error-message">Campo obrigatório.</div>
+
+    <label>Ano vigente:</label>
+    <select [(ngModel)]="avaliacao.anoVigente" (change)="carregarTurmas()">
+        <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
+    </select>
+
+    <label>Turma:</label>
+    <select [(ngModel)]="avaliacao.turmaId">
+        <option value="">Selecione uma turma</option>
+        <option *ngFor="let turma of turmas" [value]="turma.id">{{ turma.nome }}</option>
+    </select>
+    <div *ngIf="turmaErro" class="error-message">Campo obrigatório.</div>
+
+    <label>Estado:</label>
+    <select [(ngModel)]="avaliacao.estado">
+        <option *ngFor="let estado of estados" [value]="estado.valor">{{ estado.descricao }}</option>
+    </select>
+
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" [(ngModel)]="avaliacao.ativo">
+            <span class="slider"></span>
+        </label>
+        <span>Ativa</span>
+    </div>
+
+    <div class="botoes-container">
+        <!-- Botão Salvar -->
+        <button (click)="salvar()" class="botao-primario">
+            <svg class="icone-botao" xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 -960 960 960" width="18" fill="currentColor">
+                <path d="M840-680v480q0 33-23.5 56.5T760-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160Zm-80 34L646-760H200v560h560v-446ZM480-240q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/>
+            </svg>
+            Salvar
+        </button>
+
+        <button (click)="cancelar()" class="botao-secundario">Cancelar</button>
+
+        <button *ngIf="avaliacaoId" (click)="excluir()" class="botao-excluir">Excluir</button>
+    </div>
+
+    <!-- Overlay de confirmação -->
+    <div class="overlay" *ngIf="exibirConfirmacao">
+        <div class="confirm-dialog">
+            <p>Tem certeza de que deseja excluir esta avaliação?</p>
+            <div class="dialog-buttons">
+                <button (click)="confirmarExclusao()" class="botao-excluir">Excluir</button>
+                <button (click)="fecharDialog()" class="botao-secundario">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

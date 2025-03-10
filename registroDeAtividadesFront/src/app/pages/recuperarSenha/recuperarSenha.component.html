@@ -1,0 +1,12 @@
+<div class="recuperar-senha-container">
+    <h2>Recuperar Senha</h2>
+
+    <div *ngIf="mensagem" class="mensagem">{{ mensagem }}</div>
+    <div *ngIf="mensagemErro" class="erro">{{ mensagemErro }}</div>
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
+
+    <button (click)="recuperar()">Recuperar</button>
+    <button (click)="voltar()">Voltar</button>
+</div>
