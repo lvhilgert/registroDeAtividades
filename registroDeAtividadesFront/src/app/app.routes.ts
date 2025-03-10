@@ -23,25 +23,25 @@ export const routes: Routes = [
    // Aluno
   { path: 'aluno', component: AlunoComponent },
   { path: 'cadastro-aluno', component: CadastroAlunoComponent },
-  { path: 'cadastro-aluno/:id', component: CadastroAlunoComponent },
+  { path: 'cadastro-aluno/:id', component: CadastroAlunoComponent, data: { renderMode: 'server' } },
    // Avaliação
   { path: 'avaliacao', component: AvaliacaoComponent },
   { path: 'cadastro-avaliacao', component: CadastroAvaliacaoComponent },
-  { path: 'cadastro-avaliacao/:id', component: CadastroAvaliacaoComponent },
+  { path: 'cadastro-avaliacao/:id', component: CadastroAvaliacaoComponent, data: { renderMode: 'server' } },
     // Turma
   { path: 'turma', component: TurmaComponent },
   { path: 'cadastro-turma', component: CadastroTurmaComponent },
   { path: 'cadastro-turma/:id', component: CadastroTurmaComponent },
    // Atividade
   { path: 'cadastro-atividade', component: CadastroAtividadeComponent },
-  { path: 'cadastro-atividade/:avaliacaoId', component: CadastroAtividadeComponent },
-  { path: 'cadastro-atividade/:avaliacaoId/:id', component: CadastroAtividadeComponent },
+  { path: 'cadastro-atividade/:avaliacaoId', component: CadastroAtividadeComponent, data: { renderMode: 'server' } },
+  { path: 'cadastro-atividade/:avaliacaoId/:id', component: CadastroAtividadeComponent, data: { renderMode: 'server' } },
   // Aluno x atividade
   { path: 'atividade-aluno', component: AtividadeAlunoComponent },
-  { path: 'atividade-aluno/:atividadeId', component: AtividadeAlunoComponent },
+  { path: 'atividade-aluno/:atividadeId', component: AtividadeAlunoComponent, data: { renderMode: 'server' } },
 
   // Nota
-  { path: 'nota/:avaliacaoId', component: NotaComponent }
+  { path: 'nota/:avaliacaoId', component: NotaComponent, data: { renderMode: 'server' } }
 ];
 
 
